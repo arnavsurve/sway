@@ -17,22 +17,20 @@ set $menu wofi --show run
 
 exec_always /bin/autotiling
 
-output eDP-1 scale 1.6
-
 gaps inner 4
 gaps outer 4
 
 # default_border none
 default_border pixel 2
 default_floating_border none
-font pango:monospace 0
+# font pango:monospace 0
 # titlebar_padding 1
 # titlebar_border_thickness 0
 
 hide_edge_borders smart
 
 # key repeat and delay
-input * repeat_delay 150
+input * repeat_delay 200
 input * repeat_rate 40
 
 # border colors
@@ -43,7 +41,8 @@ client.focused #50c23c #50c23c #50c23c #50c23c #50c23c
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg ~/Pictures/ivan_the_terrible.jpg fill
 # output * bg /usr/share/backgrounds/fedora-workstation/montclair_dark.webp fill
-output * bg ~/Pictures/bruce-tang-2TqC4jcZ28s-unsplash.jpg fill
+# output * bg ~/Pictures/bruce-tang-2TqC4jcZ28s-unsplash.jpg fill
+output * bg /home/asurve/Pictures/launde-morel-YYNLQhdGv7A-unsplash.jpg fill
 
 # bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 # bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
@@ -71,6 +70,11 @@ bindsym F7 exec playerctl previous
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
+output eDP-1 scale 1.6
+output eDP-1 pos 320 1080 mode 3024x1890@60Hz
+output HDMI-A-1 pos 0 0 mode 1920x1080@144Hz
+#output <output> mode <resolution>@144Hz
+
 ### Idle configuration
 #
 # Example configuration:
@@ -93,6 +97,12 @@ input "1452:850:Apple_MTP_multi-touch" {
     tap enabled
     natural_scroll enabled
     scroll_factor 0.17
+    pointer_accel 0.5
+}
+
+input "1133:49291:Logitech_G502_HERO_Gaming_Mouse" {
+    accel_profile "flat"
+    pointer_accel -0.5
 }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
