@@ -99,8 +99,8 @@ input "1452:850:Apple_MTP_multi-touch" {
     dwt enabled
     tap enabled
     natural_scroll enabled
-    scroll_factor 0.17
-    pointer_accel 0.5
+    scroll_factor 0.15
+    pointer_accel 0.37
 }
 
 input "1133:49291:Logitech_G502_HERO_Gaming_Mouse" {
