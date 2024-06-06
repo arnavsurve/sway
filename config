@@ -57,14 +57,14 @@ output * bg /home/asurve/Pictures/launde-morel-YYNLQhdGv7A-unsplash.jpg fill
 # bindsym XF86AudioNext exec playerctl next
 # bindsym XF86AudioPrev exec playerctl previous
 
-bindsym F12 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym F11 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym F10 exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym F1 exec brightnessctl set 5%-
-bindsym F2 exec brightnessctl set +5%
-bindsym F8 exec playerctl play-pause
-bindsym F9 exec playerctl next
-bindsym F7 exec playerctl previous
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 
 # Example configuration:
@@ -99,7 +99,7 @@ input "1452:850:Apple_MTP_multi-touch" {
     dwt enabled
     tap enabled
     natural_scroll enabled
-    scroll_factor 0.15
+    scroll_factor 0.2
     pointer_accel 0.4
 }
 
@@ -190,6 +190,13 @@ input "1133:49291:Logitech_G502_HERO_Gaming_Mouse" {
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
+    # Move workspace across monitors
+    bindsym Control+Alt+Right move workspace to output HDMI-A-1 right
+    bindsym Control+Alt+Left move workspace to output HDMI-A-1 left
+    bindsym Control+Alt+Down move workspace to output eDP-1 down
+    bindsym Control+Alt+Up move workspace to output HDMI-A-1 up
+
 #
 # Layout stuff:
 #
