@@ -24,7 +24,7 @@ gaps inner 4
 gaps outer 4
 
 # default_border none
-default_border pixel 2
+default_border pixel 1
 default_floating_border none
 # font pango:monospace 0
 # titlebar_padding 1
@@ -45,7 +45,8 @@ client.focused #50c23c #50c23c #50c23c #50c23c #50c23c
 # output * bg ~/Pictures/ivan_the_terrible.jpg fill
 # output * bg /usr/share/backgrounds/fedora-workstation/montclair_dark.webp fill
 # output * bg ~/Pictures/bruce-tang-2TqC4jcZ28s-unsplash.jpg fill
-output * bg /home/asurve/Pictures/launde-morel-YYNLQhdGv7A-unsplash.jpg fill
+# output * bg /home/asurve/Pictures/launde-morel-YYNLQhdGv7A-unsplash.jpg fill
+output * bg /home/asurve/Pictures/leo_visions-I62h3Pv-JSI-unsplash.jpg fill
 
 # bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 # bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
@@ -66,6 +67,8 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+bindsym Alt+Shift+4 exec grim -g "$(slurp)" - | wl-copy
+bindsym Alt+Shift+3 exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')
 
 # Example configuration:
 #
