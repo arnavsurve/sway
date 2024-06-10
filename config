@@ -46,7 +46,8 @@ client.focused #50c23c #50c23c #50c23c #50c23c #50c23c
 # output * bg /usr/share/backgrounds/fedora-workstation/montclair_dark.webp fill
 # output * bg ~/Pictures/bruce-tang-2TqC4jcZ28s-unsplash.jpg fill
 # output * bg /home/asurve/Pictures/launde-morel-YYNLQhdGv7A-unsplash.jpg fill
-output * bg /home/asurve/Pictures/leo_visions-I62h3Pv-JSI-unsplash.jpg fill
+# output * bg /home/asurve/Pictures/leo_visions-I62h3Pv-JSI-unsplash.jpg fill
+output * bg /home/asurve/Pictures/jonatan-pie-xgTMSz6kegE-unsplash.jpg fill
 
 # bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 # bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
@@ -66,7 +67,11 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+# Bindings for keyboard backlight
+# bindsym Alt+XF86MonBrightnessUp exec light -As "sysfs/leds/smc::kbd_backlight" 10
+# bindsym Alt+XF86MonBrightnessDown exec light -Us "sysfs/leds/smc::kbd_backlight" 10
 
+bindsym Alt+Shift+5 exec grim -g "$(slurp)" ~/Pictures/screenshots/$(date +%s).png
 bindsym Alt+Shift+4 exec grim -g "$(slurp)" - | wl-copy
 bindsym Alt+Shift+3 exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')
 
