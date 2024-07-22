@@ -47,8 +47,8 @@ client.focused #50c23c #50c23c #50c23c #50c23c #50c23c
 # output * bg ~/Pictures/bruce-tang-2TqC4jcZ28s-unsplash.jpg fill
 # output * bg /home/asurve/Pictures/launde-morel-YYNLQhdGv7A-unsplash.jpg fill
 # output * bg /home/asurve/Pictures/leo_visions-I62h3Pv-JSI-unsplash.jpg fill
-output * bg /home/asurve/Pictures/jonatan-pie-xgTMSz6kegE-unsplash.jpg fill
-output * bg /home/asurve/Pictures/tiago-ferreira-lrlepmy3t0g-unsplash.jpg fill
+# output * bg /home/asurve/Pictures/jonatan-pie-xgTMSz6kegE-unsplash.jpg fill
+output * bg /home/asurve/Pictures/joel-filipe-_AjqGGafofE-unsplash.jpg fill
 
 # bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 # bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
