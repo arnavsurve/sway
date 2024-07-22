@@ -48,6 +48,7 @@ client.focused #50c23c #50c23c #50c23c #50c23c #50c23c
 # output * bg /home/asurve/Pictures/launde-morel-YYNLQhdGv7A-unsplash.jpg fill
 # output * bg /home/asurve/Pictures/leo_visions-I62h3Pv-JSI-unsplash.jpg fill
 output * bg /home/asurve/Pictures/jonatan-pie-xgTMSz6kegE-unsplash.jpg fill
+output * bg /home/asurve/Pictures/tiago-ferreira-lrlepmy3t0g-unsplash.jpg fill
 
 # bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 # bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
@@ -81,7 +82,7 @@ bindsym Alt+Shift+3 exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-output eDP-1 scale 1.7
+output eDP-1 scale 1.6
 output eDP-1 pos 320 1080 mode 3024x1890@60Hz
 output HDMI-A-1 pos 0 0 mode 1920x1080@144Hz
 #output <output> mode <resolution>@144Hz
@@ -108,7 +109,7 @@ input "1452:850:Apple_MTP_multi-touch" {
     tap enabled
     natural_scroll enabled
     scroll_factor 0.2
-    pointer_accel 0.4
+    pointer_accel 0.3
 }
 
 input "1133:49291:Logitech_G502_HERO_Gaming_Mouse" {
