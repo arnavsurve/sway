@@ -20,8 +20,8 @@ set $explorer nautilus
 
 exec_always /bin/autotiling
 
-gaps inner 4
-gaps outer 4
+gaps inner 6
+gaps outer 6
 
 # default_border none
 default_border pixel 1
@@ -83,8 +83,8 @@ bindsym Alt+Shift+3 exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 output eDP-1 scale 1.6
-output eDP-1 pos 320 1080 mode 3024x1890@60Hz
-output HDMI-A-1 pos 0 0 mode 1920x1080@144Hz
+output eDP-1 pos 450 1440 mode 3024x1890@60Hz
+output HDMI-A-1 pos 0 0 mode 2560x1440@165Hz
 #output <output> mode <resolution>@144Hz
 
 ### Idle configuration
@@ -114,7 +114,7 @@ input "1452:850:Apple_MTP_multi-touch" {
 
 input "1133:49291:Logitech_G502_HERO_Gaming_Mouse" {
     accel_profile "flat"
-    pointer_accel -0.5
+    pointer_accel -0.3
 }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
