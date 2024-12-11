@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term wezterm
 # Your preferred application launcher
 set $menu wofi --show run
 
@@ -33,7 +33,7 @@ exec_always autotiling
 # gaps inner 4
 # gaps outer 2
 
-default_border pixel 2
+default_border pixel 1
 default_floating_border none
 hide_edge_borders smart
 titlebar_padding 1
@@ -46,8 +46,7 @@ input * repeat_rate 40
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 
-# output * background /home/asurve/Wallpapers/1.jpg fill
-exec_always swaybg -i /home/asurve/Wallpapers/1.jpg -m fill
+exec_always swaybg -i /home/asurve/Wallpapers/3.jpg -m fill
 
 #
 # Example configuration:
