@@ -18,6 +18,8 @@ set $term wezterm
 # Your preferred application launcher
 set $menu wofi --show run
 
+font pango:HackNerdFont Light 9
+
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -246,7 +248,8 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
-    status_command /home/asurve/.config/sway/status_command.sh
+    # status_command /home/asurve/.config/sway/status_command.sh
+    status_command i3status
 }
 
 
