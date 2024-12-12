@@ -32,11 +32,21 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 exec_always autotiling
 
+gaps outer 4
+gaps inner 2
+smart_gaps on
+
 default_border pixel 1
 default_floating_border none
 hide_edge_borders smart
 titlebar_padding 1
-client.focused #000000 #000000 #60a161 #60a161 #60a161
+
+set $clear #ffffff00
+# client.focused #000000 #000000 #60a161 #60a161 #60a161
+# class                  border   background  text     indicator  child_border
+client.focused #839e88 #839e88 #000000 #839e88 #839e88
+client.focused_inactive  #333333  #5f676a     #ffffff  #484e50    $clear
+client.unfocused         #333333  #222222     #888888  #292d2e    $clear
 
 input * repeat_delay 200
 input * repeat_rate 40
